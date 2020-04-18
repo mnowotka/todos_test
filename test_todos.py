@@ -30,7 +30,6 @@ class TestTodos(unittest.TestCase):
         self.mock_get_patcher.stop()
 
     def test_getting_todos(self):
-        print("actual test!")
         todo = Service.get_todos()
         assert_is_not_none(todo)
         assert_list_equal(todo, self.expected_todos)
